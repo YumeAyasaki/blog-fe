@@ -1,0 +1,15 @@
+// Combine some of the variables...
+@use "variables" as variable;
+
+@mixin anchorStyle {
+    color: variable.$primary-color;
+    &:visited {
+        color: variable.$secondary-color;
+    }
+    &:hover {
+        color: variable.$neutral-color;
+    }
+    &:active {
+        color: variable.$neutral-color;
+    }
+}
