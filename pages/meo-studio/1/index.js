@@ -53,7 +53,7 @@ export default function index() {
         </div>
 
         {/* Logo */}
-        <Image src="/icon/vuon-hoa-su.svg" alt="logo" height={90} width={306} objectFit="contain" />
+        <Image src="/icon/vuon-hoa-su.svg" alt="logo" height={80} width={250} objectFit="contain" />
 
         {/* NavBar */}
         <div className={style.navBar}>

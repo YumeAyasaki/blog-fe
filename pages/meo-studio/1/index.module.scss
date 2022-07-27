@@ -9,7 +9,7 @@
 .header {
     display: flex;
     height: 8.5rem;
-    background: #D4AC2B;
+    background: variables.$navBar-meo;
     padding-left: 4.5rem;
     padding-right: 7rem;
     align-items: center;
@@ -21,10 +21,6 @@
         @include mixins.tablet() {
             display: flex;
         }
-
-        @include mixins.phone() {
-            display: flex;
-        }
     }
 
     .navBar {
@@ -34,16 +30,12 @@
             display: none;
         }
 
-        @include mixins.phone {
-            display: none;
-        }
-
         .navBarEle {
             margin: 1.5rem;
 
             font-family: 'Ovo';
             font-style: normal;
-            @include mixins.shortfont(400, 1.875rem, 2.125rem);
+            @include mixins.shortfont(300, 1.25rem, 2rem);
 
             color: #FFFFFF;
         }
@@ -143,6 +135,6 @@
         font-style: normal;
         @include mixins.shortfont(700, 1rem, 1.2rem);
 
-        color: #FFFFFF;
+        color: variables.$footer-meo;
     }
 }

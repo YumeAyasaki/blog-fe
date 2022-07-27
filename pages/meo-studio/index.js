@@ -1,8 +1,11 @@
+import Link from 'next/link'
 import React from 'react'
 
 function index() {
   return (
-    <div>index</div>
+    <div>
+      <Link href="/meo-studio/1">1</Link>
+    </div>
   )
 }
 
