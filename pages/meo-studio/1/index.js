@@ -47,7 +47,6 @@ export default function index() {
     <div>
       {/* Nav bar */}
       <div className={style.header}>
-        {/* <div className={style.logo}>Vườn hoa sứ</div> */}
         {/* Bar */}
         <div className={style.bar}>
           <Image src="/icon/bars.svg" alt="bar" width={35} height={41} />
@@ -70,9 +69,6 @@ export default function index() {
           <div className={style.content}>
             {
               content.map((ele) => <div key={ele.id}>
-                {/* <div className={style.content__image}>
-                  <Image src={ele.img} alt={ele.img} height="100%" width="100%" layout="responsive" objectFit="contain"></Image>
-                </div> */}
                 <Image src={ele.img} alt={ele.img} height="100%" width="100%" layout="responsive" objectFit="contain"/>
                 <div className={style.content__title}>{ele.title}</div>
                 <div className={style.content__context}>{ele.context}</div>

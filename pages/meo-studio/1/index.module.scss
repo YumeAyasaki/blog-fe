@@ -27,16 +27,6 @@
         }
     }
 
-    // .logo {
-    //     font-family: 'Pacifico';
-    //     font-style: normal;
-    //     @include mixins.shortfont(400, 3.75rem, 6.5rem);
-    //     display: flex;
-    //     align-items: center;
-    //     text-align: right;
-    //     color: #FFFFFF;
-    // }
-
     .navBar {
         display: flex;
 
@@ -130,8 +120,6 @@
 }
 
 .footer {
-    // margin-top: 4rem;
-
     padding-top: 4rem;
     padding-left: 5.625rem;
 
