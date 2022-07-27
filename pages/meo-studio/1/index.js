@@ -61,7 +61,7 @@ export default function index() {
             {
               content.map((ele) => <div key={ele.id}>
                 <div className={style.content__image}>
-                  <Image src={ele.img} alt={ele.img} layout='fill'></Image>
+                  <Image src={ele.img} alt={ele.img} layout='fill' objectFit='contain'></Image>
                 </div>
                 <div className={style.content__title}>{ele.title}</div>
                 <div className={style.content__context}>{ele.context}</div>
@@ -72,7 +72,7 @@ export default function index() {
       </main>
       <footer className={style.footer}>
         <div className={style.image}>
-          <Image src="/icon/facebook.svg" alt='facebook' layout='fill' />
+          <Image src="/icon/facebook.svg" alt='facebook' layout='fill' objectFit='contain'/>
         </div>
         <div className={style.text}>MEO Studio</div>
       </footer>

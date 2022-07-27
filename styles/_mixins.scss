@@ -13,3 +13,23 @@
         color: variable.$neutral-color;
     }
 }
+
+// Not really sure about the value, but meh...
+@mixin tablet() {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin phone() {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+
+// For font
+@mixin shortfont($weight, $size, $height) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+}
