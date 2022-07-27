@@ -5,7 +5,6 @@ import { getAllArticles } from '../../src/utils/mdx'
 import dayjs from "dayjs";
 
 export default function BlogPage({ posts }) {
-  console.log('Posts: ', posts);
   return (
     <React.Fragment>
       <Head>
