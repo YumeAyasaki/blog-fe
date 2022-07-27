@@ -20,6 +20,7 @@ const navBarEle = [
     id: 4, 
     name: "Liên hệ"
   }];
+
 const content = [
   {
     id: 1,
@@ -46,7 +47,16 @@ export default function index() {
     <div>
       {/* Nav bar */}
       <div className={style.header}>
-        <div className={style.logo}>Vườn hoa sứ</div>
+        {/* <div className={style.logo}>Vườn hoa sứ</div> */}
+        {/* Bar */}
+        <div className={style.bar}>
+          <Image src="/icon/bars.svg" alt="bar" width={35} height={41} />
+        </div>
+
+        {/* Logo */}
+        <Image src="/icon/vuon-hoa-su.svg" alt="logo" height={90} width={306} objectFit="contain" />
+
+        {/* NavBar */}
         <div className={style.navBar}>
           {
             navBarEle.map((ele) => 
@@ -60,9 +70,10 @@ export default function index() {
           <div className={style.content}>
             {
               content.map((ele) => <div key={ele.id}>
-                <div className={style.content__image}>
-                  <Image src={ele.img} alt={ele.img} layout='fill' objectFit='contain'></Image>
-                </div>
+                {/* <div className={style.content__image}>
+                  <Image src={ele.img} alt={ele.img} height="100%" width="100%" layout="responsive" objectFit="contain"></Image>
+                </div> */}
+                <Image src={ele.img} alt={ele.img} height="100%" width="100%" layout="responsive" objectFit="contain"/>
                 <div className={style.content__title}>{ele.title}</div>
                 <div className={style.content__context}>{ele.context}</div>
               </div>)
