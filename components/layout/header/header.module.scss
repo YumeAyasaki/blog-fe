@@ -1,0 +1,64 @@
+.header {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-items: center;
+    /* box-shadow: 1rem; */
+    background: #EEF2FF;
+    padding: 0.25rem 6rem;
+
+    /* LOGO */
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-right: 3rem;
+
+        .image {
+            width: 48px;
+            height: 48px;
+            padding: 2px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .text {
+            display: inline;
+            font-family: 'SVN-Bear';
+            font-weight: 400;
+            font-size: 24px;
+        }
+    }
+
+    /* CTA */
+    .nav-bar {
+        display: flex;
+        align-items: center;
+    }
+
+    .cta {
+        /* margin-top: 2.5rem; */
+        display: flex;
+        gap: 1.2rem;
+        justify-content: center;
+
+        .btn {
+            margin-left: 0.35rem;
+            margin-right: 0.35rem;
+    
+            padding: 0.35rem;
+            border-radius: 20%;
+    
+            font-weight: 700;
+
+            &:hover {
+                background-color: var(--color-bg);
+            }
+        }
+    }
+}
+
+
+

@@ -1,7 +1,11 @@
+import Layout from '../components/layout/Layout'
+
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  const getLayout = Component.getLayout ?? ((page) => <Layout>{page}</Layout>)
+
+  return getLayout(<Component {...pageProps} />)
 }
 
 export default MyApp
