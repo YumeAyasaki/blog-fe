@@ -78,12 +78,12 @@
         }
 
         .content {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
 
             .content__image {
                 position: relative;
-                
+
                 margin-bottom: 1rem;
 
                 height: 15rem;
