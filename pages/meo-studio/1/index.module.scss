@@ -6,6 +6,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Ovo');
 @import url('https://fonts.googleapis.com/css2?family=Raleway');
 
+@keyframes test {
+    0% {
+        color: #fff;
+    }
+    100% {
+        color: #ccc;
+    }
+}
+
 .header {
     display: flex;
     height: 8.5rem;
@@ -38,6 +47,13 @@
             @include mixins.shortfont(300, 1.25rem, 2rem);
 
             color: #FFFFFF;
+
+            &:hover {
+                color: #ccc;
+                // name - duration - timing-function - delay - direction - iteration-count - fill-mode - play-state
+                animation-name: test;
+                animation-duration: 0.5s;
+            }
         }
     }
 }
