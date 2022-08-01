@@ -1,12 +1,24 @@
 import Link from 'next/link'
 import React from 'react'
+import fs from 'fs';
+import path from 'path'
 
-function index() {
+export default function index(props) {
+  console.log(props);
   return (
     <div>
-      <Link href="/meo-studio/1">1</Link>
+      {props.content.map((link) => {
+      const linkT = "/meo-studio/" + link;
+      return <Link key={link} href={linkT}>{link}</Link>})}
     </div>
   )
 }
 
-export default index
+export async function getServerSideProps() {
+  const pathT = path.join(process.cwd(), 'pages/meo-studio')
+  const directory = await fs.readdirSync(pathT, { withFileTypes: true })
+  .filter(dirent => dirent.isDirectory())
+  .map(dirent => dirent.name);
+
+  return {props: {content: directory}}
+}
