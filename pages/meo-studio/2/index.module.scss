@@ -1,0 +1,164 @@
+// @use "mixin" as mixin;
+@use "styles/variables" as variables;
+@use "styles/mixins" as mixins;
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico'); // Font
+@import url('https://fonts.googleapis.com/css2?family=Ovo');
+@import url('https://fonts.googleapis.com/css2?family=Raleway');
+
+@keyframes test {
+    0% {
+        color: #fff;
+    }
+    100% {
+        color: #ccc;
+    }
+}
+
+.header {
+    display: flex;
+    height: 8.5rem;
+    background: variables.$navBar-meo;
+    padding-left: 4.5rem;
+    padding-right: 7rem;
+    align-items: center;
+    justify-content: space-between;
+
+    .bar {
+        display: none;
+
+        @include mixins.tablet() {
+            display: flex;
+        }
+    }
+
+    .navBar {
+        display: flex;
+
+        @include mixins.tablet {
+            display: none;
+        }
+
+        .navBarEle {
+            margin: 1.5rem;
+
+            font-family: 'Ovo';
+            font-style: normal;
+            @include mixins.shortfont(300, 1.25rem, 2rem);
+
+            color: #FFFFFF;
+
+            &:hover {
+                color: #ccc;
+                // name - duration - timing-function - delay - direction - iteration-count - fill-mode - play-state
+                animation-name: test;
+                animation-duration: 0.5sx;
+            }
+        }
+    }
+}
+
+.main {
+    background: variables.$background-meo;
+    mix-blend-mode: normal;
+
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+
+    .page {
+        margin-left: 3.125rem;
+        margin-right: 3.125rem;
+
+        padding-top: 1.25rem;
+        padding-left: 2.25rem;
+        padding-right: 5rem;
+        padding-bottom: 1rem;
+    
+        background: rgba(217, 217, 217, 0.6);
+        border-radius: 30px;
+
+        .title {
+            margin-bottom: 1.25rem;
+
+            font-family: 'Raleway';
+            font-style: normal;
+            @include mixins.shortfont(700, 1.5rem, 1.75rem);
+            display: flex;
+            align-items: center;
+            text-align: center;
+            
+            color: #000000;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            column-gap: 3rem;
+
+            @include mixins.tablet() {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include mixins.phone() {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .content__title {
+                margin-bottom: 1rem;
+
+                font-family: 'Raleway';
+                font-style: normal;
+                @include mixins.shortfont(700, 1rem, 1.2rem);
+
+                color: #000000;
+            }
+
+            .content__context {
+                font-family: 'Raleway';
+                font-style: normal;
+                @include mixins.shortfont(700, 0.75rem, 0.875rem);
+
+                color: #000000;
+            }
+        }
+    }
+}
+
+.footer {
+    padding-top: 4rem;
+    padding-left: 5.625rem;
+    padding-right: 3.125rem;
+
+    display: flex;
+    justify-content: space-between;
+    height: 9rem;
+
+    background: variables.$footer-meo;
+
+    .image {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+
+        position: relative;
+
+        padding-right: 2.5rem;
+    }
+
+    .text {
+        font-family: 'Raleway';
+        font-style: normal;
+        @include mixins.shortfont(700, 1rem, 1.2rem);
+
+        color: #fff;
+    }
+
+    .button {
+        background: #D9D9D9;
+        border-radius: 30px;
+        height: auto;
+    }
+}
