@@ -100,7 +100,9 @@ export default function Index() {
           </div>
           <div className={style.text}>MEO Studio</div>
         </div>
-        <button className={style.button} onClick={HandleClick}>{button ? "EN" : "VI"}</button>
+        <div>
+          <button className={style.button} onClick={HandleClick}>{button ? "Do something" : "Làm gì đó"}</button>
+        </div>
       </footer>
     </div>
   )
