@@ -49,7 +49,9 @@ export default function index() {
       <div className={style.header}>
         {/* Bar */}
         <div className={style.bar}>
-          <Image src="/icon/bars.svg" alt="bar" width={35} height={41} />
+          <button>
+            <Image src="/icon/bars.svg" alt="bar" width={35} height={41} />
+          </button>
         </div>
 
         {/* Logo */}
