@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
+import { useState } from 'react';
 
 import style from "./index.module.scss"
 
@@ -42,7 +43,7 @@ const content = [
   }
 ]
 
-export default function index() {
+export default function Index() {
   return (
     <div>
       {/* Nav bar */}
@@ -71,7 +72,9 @@ export default function index() {
           <div className={style.content}>
             {
               content.map((ele) => <div key={ele.id}>
-                <Image src={ele.img} alt={ele.img} height="100%" width="100%" layout="responsive" objectFit="contain"/>
+                <div className={style.image}>
+                  <Image src={ele.img} alt={ele.img} height="100%" width="100%" layout="responsive" objectFit="contain"/>
+                </div>                
                 <div className={style.content__title}>{ele.title}</div>
                 <div className={style.content__context}>{ele.context}</div>
               </div>)
@@ -89,7 +92,7 @@ export default function index() {
   )
 }
 
-index.getLayout = function getLayout(page) {
+Index.getLayout = function getLayout(page) {
   return (
     <>
       {page}

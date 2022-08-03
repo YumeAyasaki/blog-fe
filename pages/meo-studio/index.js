@@ -4,12 +4,11 @@ import fs from 'fs';
 import path from 'path'
 
 export default function index(props) {
-  console.log(props);
   return (
     <div>
       {props.content.map((link) => {
       const linkT = "/meo-studio/" + link;
-      return <Link key={link} href={linkT}>{link}</Link>})}
+      return <div key={link}><Link href={linkT}>{link}</Link></div>})}
     </div>
   )
 }
