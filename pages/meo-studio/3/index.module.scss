@@ -1,0 +1,33 @@
+@use "../styles/variables" as variables;
+
+.navBar {
+    display: flex;
+    height: 4.75rem;
+
+    background-color: variables.$primary-color;
+    align-content: center;
+
+    .logo {
+        position: relative;
+
+        width: 3.125rem;
+        height: 3.125rem;
+    }
+
+    .navEle {
+        display: flex;
+
+        .ele {
+            padding-right: 3.125rem;
+            padding-right: 3.125rem;
+        }
+    }
+
+    .logIn {
+
+    }
+
+    .signIn {
+
+    }
+}
