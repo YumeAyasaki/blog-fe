@@ -1,6 +1,6 @@
 // @use "mixin" as mixin;
-@use "styles/variables" as variables;
-@use "styles/mixins" as mixins;
+@use "../styles/variables" as variables;
+@use "../styles/mixins" as mixins;
 
 @import url('https://fonts.googleapis.com/css2?family=Pacifico'); // Font
 @import url('https://fonts.googleapis.com/css2?family=Ovo');
