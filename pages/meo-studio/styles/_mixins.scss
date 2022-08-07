@@ -1,19 +1,6 @@
 // Combine some of the variables...
 @use "variables" as variable;
 
-@mixin anchorStyle {
-    color: variable.$primary-color;
-    &:visited {
-        color: variable.$secondary-color;
-    }
-    &:hover {
-        color: variable.$neutral-color;
-    }
-    &:active {
-        color: variable.$neutral-color;
-    }
-}
-
 // Not really sure about the value, but meh...
 @mixin tablet() {
     @media (max-width: 992px) {
@@ -32,4 +19,20 @@
     font-weight: $weight;
     font-size: $size;
     line-height: $height;
+}
+
+@mixin fontICielBC($size, $height, $color) {
+    @font-face {
+        font-family: 'iCielBC';
+        src: url('../fonts/._iCiel Brush Up.ttf');
+    }
+        
+
+    font-family: 'iCielBC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: $size;
+    line-height: $height;
+
+    color: $color;
 }

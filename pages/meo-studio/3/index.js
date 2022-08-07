@@ -31,7 +31,6 @@ const navElement = [
 export default function Index() {
   const router = useRouter();
   const preLink = router.pathname;
-  console.log(router);
   return (
     <div>
         <div className={style.navBar}>
@@ -40,14 +39,14 @@ export default function Index() {
           </div>
           <div className={style.navEle}>
             {
-              navElement.map((ele) => 
-              <Link href={preLink + ele.href} key={ele.key}>{ele.name}</Link>
+              navElement.map((ele) =>
+              <Link href={preLink + ele.href} key={ele.key} >
+                <a className={style.ele}>
+                  {ele.name}
+                </a>
+              </Link>
               )
             }
-            <div>Tiểu sử</div>
-            <div>Mục lục</div>
-            <div>Tìm kiếm</div>
-            <div>Liên hệ</div>
           </div>
           <div className={style.logIn}>Đăng nhập</div>
           <div className={style.signIn}>Đăng ký</div>

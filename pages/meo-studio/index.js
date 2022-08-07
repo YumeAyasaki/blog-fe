@@ -17,7 +17,8 @@ export async function getServerSideProps() {
   const pathT = path.join(process.cwd(), 'pages/meo-studio')
   const directory = await fs.readdirSync(pathT, { withFileTypes: true })
   .filter(dirent => dirent.isDirectory())
-  .map(dirent => dirent.name);
+  .map(dirent => dirent.name)
+  .filter(dirent => dirent != "fonts" && dirent != "styles");
 
   return {props: {content: directory}}
 }
