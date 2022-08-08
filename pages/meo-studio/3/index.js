@@ -33,25 +33,30 @@ export default function Index() {
   const preLink = router.pathname;
   return (
     <div>
-        <div className={style.navBar}>
-          <div className={style.logo}>
-            <Image src="/icon/Simple_Music.svg" alt="logo" layout='fill' objectFit='contain'/>
-          </div>
-          <div className={style.navEle}>
-            {
-              navElement.map((ele) =>
-              <Link href={preLink + ele.href} key={ele.key} >
-                <a className={style.ele}>
-                  {ele.name}
-                </a>
-              </Link>
-              )
-            }
-          </div>
+      <div className={style.navBar}>
+        <div className={style.logo}>
+          <Image src="/icon/Simple_Music.svg" alt="logo" layout='fill' objectFit='contain'/>
+        </div>
+        <div className={style.navEle}>
+          {
+            navElement.map((ele) =>
+            <Link href={preLink + ele.href} key={ele.key} >
+              <a className={style.ele}>
+                {ele.name}
+              </a>
+            </Link>
+            )
+          }
+        </div>
+        <div className={style.buttonArea}>
           <div className={style.logIn}>Đăng nhập</div>
           <div className={style.signIn}>Đăng ký</div>
         </div>
-        <div>Main page</div>
+      </div>
+      <div className={style.container}>
+        <div>ABC</div>
+        <div>DEF</div>
+      </div>
     </div>
   )
 }

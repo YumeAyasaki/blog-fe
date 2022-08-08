@@ -18,7 +18,7 @@ export async function getServerSideProps() {
   const directory = await fs.readdirSync(pathT, { withFileTypes: true })
   .filter(dirent => dirent.isDirectory())
   .map(dirent => dirent.name)
-  .filter(dirent => dirent != "fonts" && dirent != "styles");
+  .filter(dirent => dirent != "styles");
 
   return {props: {content: directory}}
 }

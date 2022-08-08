@@ -1,6 +1,22 @@
 // Combine some of the variables...
 @use "variables" as variable;
 
+@font-face {
+    font-family: 'iCielBrushUp';
+    src: url('/fonts/iCiel-Brush-Up.ttf') format("truetype");
+    src: url('/fonts/iCiel-Brush-Up.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'iCielCubano';
+    src: url('/fonts/iCielBCCubano-Normal.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'iCielOldStyle';
+    src: url('/fonts/iCielBCOldStyle-Regular.ttf') format("truetype");
+}
+
 // Not really sure about the value, but meh...
 @mixin tablet() {
     @media (max-width: 992px) {
@@ -21,14 +37,28 @@
     line-height: $height;
 }
 
-@mixin fontICielBC($size, $height, $color) {
-    @font-face {
-        font-family: 'iCielBC';
-        src: url('../fonts/._iCiel Brush Up.ttf');
-    }
-        
+@mixin fontICielBrushUp($size, $height, $color) {
+    font-family: 'iCielBrushUp';
+    font-style: normal;
+    font-weight: 400;
+    font-size: $size;
+    line-height: $height;
 
-    font-family: 'iCielBC';
+    color: $color;
+}
+
+@mixin iCielCubano($size, $height, $color) {
+    font-family: 'iCielCubano';
+    font-style: normal;
+    font-weight: 400;
+    font-size: $size;
+    line-height: $height;
+
+    color: $color;
+}
+
+@mixin iCielOldStyle($size, $height, $color) {
+    font-family: 'iCielOldStyle';
     font-style: normal;
     font-weight: 400;
     font-size: $size;

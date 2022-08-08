@@ -1,42 +1,72 @@
 @use "../styles/variables" as variables;
 @use "../styles/mixins" as mixins;
 
-@font-face {
-    font-family: 'iCielBC';
-    src: url('../fonts/._iCiel Brush Up.ttf');
-}
-
 .navBar {
     display: flex;
     height: 4.75rem;
 
     background-color: variables.$primary-color;
-    align-content: center;
+    align-items: center;
+
+    padding-right: 3.125rem;
+    padding-left: 1rem;
 
     .logo {
         position: relative;
 
         width: 3.125rem;
         height: 3.125rem;
+
+        margin-right: 6.25rem;
     }
 
     .navEle {
         display: flex;
 
         .ele {
-            padding-right: 3.125rem;
-            padding-left: 3.125rem;
+            margin-right: 3.125rem;
+            margin-left: 3.125rem;
+            @include mixins.iCielCubano(1.5rem, 1.875rem, variables.$secondary-color);
         }
     }
 
-    .logIn {
+    .buttonArea {
+        margin-left: auto;
+        display: flex;
 
+        .logIn {
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+    
+            @include mixins.iCielCubano(1.5rem, 1.875rem, variables.$secondary-color);
+        }
+    
+        .signIn {
+            border-radius: 80px;
+            background-color: variables.$secondary-color;
+    
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+    
+            @include mixins.iCielCubano(1.5rem, 1.875rem, variables.$primary-color);
+        }
+    }
+}
+
+.container {
+    background-image: url("/img/bg-TCS.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    min-height: 60rem;
+
+    display: flex;
+
+    .searchBar {
+        
     }
 
-    .signIn {
-        border-radius: 80px;
-        background-color: variables.$secondary-color;
+    .TCS {
 
-        @include mixins.fontForE3(1.5rem, 1.875rem, variables.$secondary-color);
     }
 }
