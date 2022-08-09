@@ -62,11 +62,38 @@
 
     display: flex;
 
+    align-items: center;
+
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+
     .searchBar {
-        
+        height: 2rem;
+        width: 100%;
+
+        background: rgba(203, 198, 168, 0.8);
+        border-radius: 80px;
+
+        display: flex;
+
+        align-items: center;
+        justify-items: center;
+
+        .input {
+            position: relative;
+            margin-left: 0.5rem;
+            
+            background: transparent;
+            border: transparent;
+            width: 100%;
+
+            &:focus-visible {
+                outline: none;
+            }
+        }
     }
 
     .TCS {
-
+        @include mixins.fontICielBrushUp(11.25rem, 15.675rem, #E3CBB8);
     }
 }

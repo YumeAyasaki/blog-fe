@@ -54,8 +54,18 @@ export default function Index() {
         </div>
       </div>
       <div className={style.container}>
-        <div>ABC</div>
-        <div>DEF</div>
+        <div className={style.searchBar}>
+          <input className={style.input} onChange={event => event.currentTarget.value} placeHolder="Searching for something"/>
+          <div style={{width: '1.5rem', height: '1.5rem', position: 'relative', marginLeft: '0.5rem', marginRight: '0.5rem'}}>
+            <Image src="/icon/search-meo.svg" alt="search icon" layout='fill' objectFit='contain'/>
+          </div>
+        </div>
+        <div style={{marginLeft: "1rem"}}>
+          {/* Trịnh Công Sơn */}
+          <div className={style.TCS}>Trịnh</div>
+          <div className={style.TCS}>Công</div>
+          <div className={style.TCS}>Sơn</div>
+        </div>
       </div>
     </div>
   )
