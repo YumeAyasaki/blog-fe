@@ -1,0 +1,14 @@
+@use "../../styles/variables" as variables;
+
+.page {
+    background-color: variables.$primary-color;
+    min-height: 100vh;
+
+    .first-section {
+
+    }
+
+    .second-section {
+        
+    }
+}
