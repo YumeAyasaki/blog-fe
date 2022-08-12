@@ -6,5 +6,6 @@ export default function Stick() {
         left: "43px",
         top: "30.5px",
         background: "#312938",
-        borderRadius: "80px"}}></div>)
+        borderRadius: "80px", 
+        alignSelf:"flex-start"}}></div>)
 }
