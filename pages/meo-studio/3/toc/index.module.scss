@@ -1,0 +1,55 @@
+@use "../../styles/variables" as variables;
+@use "../../styles/mixins" as mixins;
+
+.page {
+    background-color: variables.$primary-color;
+    min-height: 100vh;
+
+    padding-top: 2rem;
+    padding-left: 2.7rem;
+    
+    display: flex;
+
+    .title {
+        margin-left: 0.875rem;
+        @include mixins.iCielCubano(2.5rem, 3rem, variables.$secondary-color);
+    }
+
+    .content {
+        display: flex;
+
+        margin-left: 2rem;
+        margin-top: 1.5rem;
+
+        align-items: center;
+
+        .rightArea {
+            margin-left: 2rem;
+        }
+
+        .title {
+            text-align: center;
+            @include mixins.iCielOldStyle(2rem, 2.7rem, variables.$secondary-color);
+        }
+
+        .text {
+            @include mixins.iCielOldStyle(1.5rem, 2rem, variables.$secondary-color);
+        }
+    }
+
+    .button {
+        width: 16rem;
+        height: 6.625rem;
+
+        background: linear-gradient(180deg, #6B4D35 0%, rgba(107, 77, 53, 0) 155.36%);
+        border-radius: 5rem;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        text-align: center;
+
+        @include mixins.iCielCubano(2.25rem, 2.7rem, variables.$primary-color);
+        line-height: 6.625rem;
+    }
+}
