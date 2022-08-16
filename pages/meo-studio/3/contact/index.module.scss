@@ -5,6 +5,8 @@
     background-color: variables.$primary-color;
     min-height: 100vh;
 
+    padding-top: 5.5rem;
+
     .content {
         display: flex;
 
@@ -17,21 +19,71 @@
             background: #6B4D35;
             border-radius: 7rem;
 
-            overflow: visible;
+            display: flex;
 
             .image {
+                position: relative;
+                margin-top: -3.5rem; // normal top (left) will not remove the gap they leave behind
+                margin-left: -3rem;
+
+                min-width: 31.375rem;
+                height: 35rem;
+                border-radius: 7rem;
+            }
+
+            .icon {
+                position: relative;
+                margin-top: 32rem;
+                margin-left: -1rem;
                 
+                width: 6rem;
+                height: 6rem;
+
+                color: variables.$secondary-color; // Note: Cannot change, have to use something other than Image Nextjs
+                // Or use font like in figma
+                transform: rotate(15.93deg);
             }
 
             .text {
+                position: relative;
+                margin-right: 1.875rem;
+                @include mixins.iCielOldStyle(1.5rem, 2rem, variables.$primary-color);
+                width: 100%;
 
+                align-self: center;
             }
+        }
+
+        .title {
+            @include mixins.iCielCubano(6rem, 7.2rem, variables.$secondary-color);
+            align-self: center;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
     .footer {
+        margin-top: 5rem;
         background-color: variables.$secondary-color;
         width: 100%;
         display: flex;
+
+        .aboutUs {
+            width: 50%;
+            .title {
+                @include mixins.iCielCubano(6rem, 7.2rem, variables.$secondary-color);
+            }
+            .text {
+                @include mixins.iCielOldStyle(1.5rem, 2rem, variables.$primary-color);
+            }
+        }
+
+        .contactUs {
+
+        }
+
+        .account {
+
+        }
     }
 }
