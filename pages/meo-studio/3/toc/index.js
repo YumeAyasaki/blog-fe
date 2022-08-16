@@ -44,6 +44,7 @@ export default function Index() {
 
             <div style={{height:'3rem'}} />
             <div className={styles.button}>Xem thêm</div>
+            <div style={{height: '3rem'}} />
         </div>
     </div>
   )
