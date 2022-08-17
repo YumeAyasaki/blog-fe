@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
+import Link from 'next/link'
 import Stick from '../../components/stick'
 
 import styles from './index.module.scss'
@@ -73,12 +74,24 @@ export default function Index() {
           </div>
           <div className={styles.content}>
             {
-              secondEle.map(ele => { return (<div key={ele.id} className={styles.ele}>
+              secondEle.map(ele => { return (ele.id == 1 ? (
+                <Link href='biography/diemxua' key={ele.id} >
+                  <a>
+                    <div className={styles.ele}>
+                      <div style={{position: 'relative', height: '17.75rem', width: '23rem'}}>
+                        <Image src={ele.src} alt='img' layout='fill' objectFit='contain'/>
+                      </div>
+                      <div>{ele.text}</div>
+                    </div>
+                  </a>
+                </Link>
+                ) : (
+                <div key={ele.id} className={styles.ele}>
                   <div style={{position: 'relative', height: '17.75rem', width: '23rem'}}>
                     <Image src={ele.src} alt='img' layout='fill' objectFit='contain'/>
                   </div>
                   <div>{ele.text}</div>
-                </div>)
+                </div>))
               })
             }
           </div>
