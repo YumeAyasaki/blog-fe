@@ -1,0 +1,94 @@
+@use "../../styles/variables" as variables;
+@use "../../styles/mixins" as mixins;
+// Note: 10 columns + 10px gap seem to be the fittest
+
+$temp-color: rgba(107, 77, 53, 1);
+
+.page {
+    background-color: variables.$primary-color;
+    min-height: 100vh;
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    .title {
+        text-align: center;
+        @include mixins.iCielCubano(2.5rem, 3rem, variables.$secondary-color);
+    }
+
+    .poem {
+        margin-top: 2.5rem;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 10px;
+
+        .leftSection {
+            grid-column: 1/8;
+            display: grid;
+            grid-template-columns: subgrid;
+
+            .title {
+                grid-column: 1/8;
+                @include mixins.iCielOldStyle(2rem, 2.7rem, $temp-color);
+                text-align: left;
+                padding-left: 3.25rem;
+            }
+
+            .firstSection {
+                grid-column: 1/5;
+                @include mixins.iCielOldStyle(1.5rem, 2rem, variables.$secondary-color);
+                padding-left: 3.25rem;
+            }
+
+            .secondSection {
+                grid-column: 5/8;
+                @include mixins.iCielOldStyle(1.5rem, 2rem, variables.$secondary-color);
+            }
+        }
+
+        .rightSection {
+            grid-column: 8/11;
+        }
+    }
+
+    .author {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 10px;
+
+        .image {
+            grid-column: 1/4;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+
+            .text {
+                @include mixins.iCielOldStyle(1.2rem, 1.7rem, $temp-color);
+                transform: rotate(180deg);
+                writing-mode: vertical-rl;
+            }
+
+            .avatar {
+                margin-left: 0.5rem;
+                position: relative;
+                width: 16rem;
+                height: 19rem;
+            }
+        }
+
+        .bioAu {
+            grid-column: 4/10;
+            padding-left: 1rem;
+
+            .title {
+                text-align: left;
+                @include mixins.iCielOldStyle(2rem, 2.7rem, $temp-color);
+            }
+
+            .text {
+                margin-top: 5rem;
+                @include mixins.iCielOldStyle(1.375rem, 1.8rem, variables.$secondary-color);
+            }
+        }
+    }
+}

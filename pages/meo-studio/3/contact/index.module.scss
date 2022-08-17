@@ -1,6 +1,8 @@
 @use "../../styles/variables" as variables;
 @use "../../styles/mixins" as mixins;
 
+$title: rgba(107, 77, 53, 1);
+
 .page {
     background-color: variables.$primary-color;
     min-height: 100vh;
@@ -68,22 +70,69 @@
         width: 100%;
         display: flex;
 
+        .title {
+            @include mixins.iCielCubano(2rem, 2.375rem, $title);
+        }
+
+        padding-top: 2.3rem;
+
         .aboutUs {
-            width: 50%;
+            width: 60%;
+
             .title {
-                @include mixins.iCielCubano(6rem, 7.2rem, variables.$secondary-color);
+                margin-left: 7.5rem;
             }
             .text {
+                margin-left: 5.5rem;
+                margin-right: 5.5rem;
+                margin-top: 2.5rem;
                 @include mixins.iCielOldStyle(1.5rem, 2rem, variables.$primary-color);
             }
         }
 
         .contactUs {
+            width: 20%;
 
+            @include mixins.iCielOldStyle(1.5rem, 2rem, variables.$primary-color);
         }
 
         .account {
+            width: 20%;
 
+            margin-top: auto;
+            margin-bottom: auto;
+
+            // Should have variable(s) here...
+            .logIn {
+                margin-bottom: 1rem;
+                width: 12.5rem;
+                height: 4.625rem;
+        
+                margin-left: auto;
+                margin-right: auto;
+        
+                text-align: center;
+        
+                @include mixins.iCielCubano(2.25rem, 2.7rem, variables.$primary-color);
+                line-height: 4.625rem;
+            }
+
+            .signIn {
+                margin-top: 1rem;
+                width: 12.5rem;
+                height: 4.625rem;
+        
+                background: variables.$primary-color;
+                border-radius: 5rem;
+        
+                margin-left: auto;
+                margin-right: auto;
+        
+                text-align: center;
+        
+                @include mixins.iCielCubano(2.25rem, 2.7rem, variables.$secondary-color);
+                line-height: 4.625rem;
+            }
         }
     }
 }

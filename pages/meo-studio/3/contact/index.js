@@ -7,6 +7,29 @@ const text = 'Có những ngày tuyệt vọng cùng cực, tôi và cuộc đ�
 
 const textAboutUs = '“Trịnh công sơn” là một dự án được thành lập bởi học sinh sinh viên yêu và cảm nhạc trịnh trên cả nước với mong muốn đem màu nhạc xưa, những lời ca nét bút ủa cố nhạc sĩ hay chỉ đơn giản là những mảnh chuyện nhỏ về cuộc đời ông đến thính/độc giả'
 
+const contactUsEle = [
+  {
+    src: '/icon/facebookContactUs.svg',
+    text: 'TCSSPTER',
+    id: 1,
+  },
+  {
+    src: '/icon/instagramContactUs.svg',
+    text: 'TCSSPTER',
+    id: 2,
+  },
+  {
+    src: '/icon/youtubeContactUs.svg',
+    text: 'TCSSPTER',
+    id: 3,
+  },
+  {
+    src: '/icon/phoneContactUs.svg',
+    text: '0341200622',
+    id: 4,
+  }
+]
+
 export default function Index() {
   return (
     <div className={styles.page}>
@@ -33,9 +56,23 @@ export default function Index() {
               <div className={styles.title}>About us</div>
               <div className={styles.text}>{textAboutUs}</div>
             </div>
-            <div>Contact us</div>
-            <div>Stick</div>
-            <div>Đăng nhập đăng ký</div>
+            <div className={styles.contactUs}>
+              <div className={styles.title}>Contact us</div>
+              {
+                contactUsEle.map((ele) => 
+                <div key={ele.id} style={{marginTop: '0.75rem', marginBottom: '0.75rem', display: 'flex'}}>
+                  <div style={{position: 'relative', width: '2.5rem', height: '2.5rem'}}>
+                    <Image src={ele.src} alt='img' layout='fill' objectFit='contain'/>
+                  </div>
+                  <div style={{marginLeft: '0.75rem', alignSelf: 'end'}}>{ele.text}</div>
+                </div>)
+              }
+            </div>
+            {/* <div style={{minHeight: '100%', width: '1px', backgroundColor: '#fff'}}/> */}
+            <div className={styles.account}>
+              <div className={styles.logIn}>Đăng nhập</div>
+              <div className={styles.signIn}>Đăng ký</div>
+            </div>
         </div>
     </div>
   )
